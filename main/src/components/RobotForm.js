@@ -5,7 +5,7 @@ class RobotForm extends Component {
     constructor(props){
         super(props)
         this.state = {
-            id : '',
+            // id : '',
             type : '',
             name : '',
 			mass : ''
@@ -18,15 +18,16 @@ class RobotForm extends Component {
     }
     render(){
         return <div>
-            <input id="id" name="id" onChange={this.handleChange} />
-            <input id="type" name="type" onChange={this.handleChange} />
-             <input id="name" name="name" onChange={this.handleChange} />
-              <input id="mass" name="mass" onChange={this.handleChange} />
+            <label>Name:</label>
+            <input id="name" name="name" onChange={this.handleChange} />
+            <label>Type:</label>
+            <input id="type" name="type" onChange={this.handleChange} />     
+            <label>Mass:</label>        
+            <input id="mass" name="mass" onChange={this.handleChange} />
              <input type="button"  value="add" onClick={() => this.props.onAdd({
-              id : this.state.id,
               type : this.state.type,
               name : this.state.name,
-               mass : this.state.mass,
+              mass : this.state.mass,
             })} />
         </div>
     }

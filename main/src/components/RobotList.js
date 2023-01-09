@@ -3,8 +3,6 @@ import RobotStore from '../stores/RobotStore'
 import Robot from './Robot'
 import RobotForm from './RobotForm'
 
-
-
 class RobotList extends Component {
 	constructor(){
 		super()
